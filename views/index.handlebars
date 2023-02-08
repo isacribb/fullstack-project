@@ -1,0 +1,39 @@
+<div id="div-search">
+    <h1 id="title-div-seach">Encontre o emprego ideal para você</h1>
+    <p id="description-div-search">Somos a maior rede de divulgação de vagas de empregos!</p>
+    <form id="form-div-search" action="/" method="GET">
+        <div>
+            <input type="text" class="search-div-search" name="job" id="job" placeholder="Digite a vaga que está buscando" size="50">
+        </div>
+        <div>
+            <button type="submit" class="button-div-search">Procurar</button>
+        </div>
+    </form>
+</div>
+<main>
+    <div id="jobs-board">
+        <div class="">
+            <div class="">
+                {{#if search}}
+                <h2 id="titulo-jobs-board">Buscando vagas que contém:{{search}}</h2>
+                {{else}}
+                <h2 id="titulo-jobs-board">Veja as nossas vagas em destaque:</h2>
+                {{/if}}
+                <ul id="ul-vagas" class="">
+                    {{#each jobs}}
+                        <li class="box-vaga{{#if dataValues.new_job}}-nova{{/if}}">
+                            <div class="details-vagas">
+                                <p>{{dataValues.company}}</p>
+                                <h2>{{dataValues.title}}</h2>
+                                <p>{{dataValues.salary}}$</p>
+                            </div>
+                            <span id="nova-vaga" class="hidden{{#if dataValues.new_job}}-reverse{{/if}}">Nova</span>
+                            <a class="ver-vaga-box">Ver vaga</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+<link rel="stylesheet" href="/styles.css">

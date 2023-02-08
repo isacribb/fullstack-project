@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo&family=Montserrat:wght@500&family=Open+Sans:wght@400;500&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <title>Trampos</title>
+    <link rel="stylesheet" href="./public/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <a id="logo" href="index.html">Trampos</a>
+            <button class="">
+                <span class=""></span>
+            </button>
+            <div id="options">
+                <a class="nav-options" href="index.html">Ver Vagas</a>
+                <a id="abrir-vaga" class="nav-options" href="add.html">Abrir Vaga</a>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <div class="">
+            <div id="form-title">
+                <h1 id="">Divulgue a vaga preenchendo o formulário</h1>
+            </div>
+            <div id="form">
+                <div id="title-in-form">
+                    <h2>Preencha os dados da melhor forma possível para encontrar mais rápido seu colaborador</h2>
+                </div>
+                <div class="form-group">
+                    <label for="title">Título da vaga:</label>
+                    <textarea cols="50" rows="2" type="text" class="form-control" id="title" name="title"
+                        placeholder="Digite o título da vaga" size="100" required></textarea>
+                    <small id="" class="f">*O título é muito importante, seja claro e objetivo.</small>
+                </div>
+                <div class="form-group">
+                    <label for="description">Descrição da vaga:</label>
+                    <textarea cols="50" rows="5" type="text" class="form-control" id="description" name="description"
+                        placeholder="Descreva as atividades do desenvolvedor..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="company">Empresa contratante:</label>
+                    <textarea cols="50" rows="2" type="text" class="form-control" id="company" name="company"
+                        placeholder="Digite a empresa que vai contratar" size="100" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail para contato:</label>
+                    <textarea cols="50" rows="2" type="email" class="form-control" id="email" name="email"
+                        placeholder="Digite o e-mail para contato" size="100" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salário oferecido:</label>
+                    <textarea cols="50" rows="2" type="text" class="form-control" id="salary" name="salary"
+                        placeholder="Digite o Salário da vaga" size="100" required></textarea>
+                </div>
+                <textarea cols="100" rows="5" type="hidden" name="new_job" value="1" id="hide-input"></textarea>
+                <button type="submit" class="button-enviar">Enviar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<footer id="footer">
+    <h2>isac brito</h2>
+    <h4>2023</h4>
+  </footer>
+</html>

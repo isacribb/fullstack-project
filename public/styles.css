@@ -1,0 +1,310 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url(background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* HEADER */
+
+#nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7em;
+}
+
+#logo{
+    color: black;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 2px;
+    background-image: linear-gradient(90deg, #4e0757,#2600ff);
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-collor: transparent;
+}
+
+#nav div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+}
+
+#abrir-vaga{
+    background-color: #5B86E5;
+    padding: .3em .9em ;
+    border: 2px solid rgb(255, 255, 255);
+    transition: all .3s ease-in-out;
+}
+
+#abrir-vaga:hover{
+    background-color: transparent;
+    color: #5B86E5;
+    transition: all .3s ease-in-out;
+}
+
+
+.nav-options{
+    color: black;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+/* DIV SEARCH */
+
+#div-search{
+    background-image: linear-gradient(45deg,#1488cc,#2b32b2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    color: white;
+}
+
+#title-div-seach{
+    height: 20%;
+    padding-top: 2em;
+    font-size: 2.5em;
+}
+
+#description-div-search{
+    font-size: 1.3em;
+    padding-top: .5em;
+}
+
+#form-div-search{
+    width: 70%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.search-div-search{
+    font-size: 1.2em;
+    border-radius: 4px;
+    padding: 3px 5px ;
+}
+
+.button-div-search{
+    font-size: 1em;
+    padding: 5px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    transition: all .2s ;
+}
+
+.button-div-search:hover{
+    background-color: #0051ff;
+    color: white;
+    transition: all .2s ;
+}
+
+/* SEÇÃO DE VAGAS*/
+
+#jobs-board{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    margin-left: 15vw;
+    padding-bottom: 5vw;
+    
+}
+
+#titulo-jobs-board{
+    height: 7vw;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-size: 2.1em;
+    padding-top: .3em;
+}
+
+#ul-vagas{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    
+    text-transform: capitalize;
+}
+
+.hidden{
+    display: none;
+}
+
+.hidden-reverse{
+    background-color: yellow;
+}
+
+.box-vaga{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+    border: 2px solid #164ec6;
+    padding: 1em;
+    height: 10vw;
+    padding-right: 2em;
+    box-shadow: 10px 10px  rgba(0, 72, 255, 0.5);
+    transition: all .1s ease-in-out;
+    background-color: white;
+}
+
+.box-vaga:hover{
+    box-shadow: none;
+    transition: all .1s ease-in-out;
+}
+/* vagas novas */
+.box-vaga-nova{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+    border: 2px solid #164ec6;
+    padding: 1em;
+    height: 10vw;
+    padding-right: 2em;
+    box-shadow: 10px 10px  rgba(0, 72, 255, 0.5);
+    transition: all .1s ease-in-out;
+    background-color: rgb(228, 236, 248);
+}
+
+.box-vaga-nova:hover{
+    box-shadow: none;
+    transition: all .1s ease-in-out;
+}
+
+
+
+.details-vagas{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+    padding-left: 1em;
+}
+
+#nova-vaga{
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform:uppercase;
+    font-style:inherit;
+}
+
+.ver-vaga-box{
+    background-color: #0051ff;
+    font-size: 1.2em;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.ver-vaga-box:hover{
+    background-color: transparent;
+    color: blue;
+    transition: all .2s ease-in-out;
+}
+#footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: .5em;
+    height: 5vw;
+    background-color: white;
+    font-size: .8em;
+    text-transform: uppercase;
+}
+
+/* PAGINA ADD.HTML */
+
+#form-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vw;
+}
+
+#form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 4vw;
+    background-color: white;
+    width: 55vw;
+    border-radius: 20px;
+    border: 1px solid rgb(78, 78, 78);
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-bottom: 5vw;
+    box-shadow: 10px 10px  rgb(116, 117, 119);
+}
+
+#title-in-form {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top:1.2em ;
+    padding-bottom: 1em;
+}
+
+.form-group{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    width: 40vw;
+    font-size: 1.2em;
+}
+
+.form-group textarea{
+    font-size: 1em;
+    padding: .5em;
+}
+
+.button-enviar{
+    background-color: #0051ff;
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: 2vw;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.button-enviar:hover{
+    background-color: transparent;
+    color: blue;
+    transition: all .2s ease-in-out;
+}
+
+#hide-input{
+    display: none;
+}
+
+
