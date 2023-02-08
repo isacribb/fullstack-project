@@ -1,7 +1,7 @@
 <div id="div-search">
     <h1 id="title-div-seach">Encontre o emprego ideal para você</h1>
     <p id="description-div-search">Somos a maior rede de divulgação de vagas de empregos!</p>
-    <form id="form-div-search" action="/" method="GET">
+    <form id="form-div-search" class="form-inline" action="/" method="GET">
         <div>
             <input type="text" class="search-div-search" name="job" id="job" placeholder="Digite a vaga que está buscando" size="50">
         </div>
@@ -15,7 +15,7 @@
         <div class="">
             <div class="">
                 {{#if search}}
-                <h2 id="titulo-jobs-board">Buscando vagas que contém:{{search}}</h2>
+                <h2 id="titulo-jobs-board">Buscando vagas que contém: "{{search}}"</h2>
                 {{else}}
                 <h2 id="titulo-jobs-board">Veja as nossas vagas em destaque:</h2>
                 {{/if}}

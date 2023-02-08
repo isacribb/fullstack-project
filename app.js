@@ -6,8 +6,8 @@ const bodyParser = require('body-parser')
 const path       = require('path')
 const { engine } = require('express-handlebars');
 const Job        = require('./models/Job')
-const Sequellize = require('sequelize')
-const Op         = Sequellize.Op
+const Sequelize = require('sequelize')
+const Op         = Sequelize.Op;
 
 
 
@@ -42,35 +42,40 @@ db
 app.get('/', (req, res) => {
 
     let search = req.query.job;
-    let query = '%'+ search +'%'; //semalhança de caracteres
-
-    if(!search){
-        Job.findAll({order: [
-            ['createdAt', 'DESC']
-        ]})
-        .then(jobs => {
-            res.render('index', {
-                jobs
-            })
-        })
-        .catch(err => console.log(err))
-    }else{
-        if(!search){
-            Job.findAll({
-                where: {title: {[Op.like]: query}},
-                order: [
-                ['createdAt', 'DESC']
-            ]})
-            .then(jobs => {
-                res.render('index', {
-                    jobs, search
-                })
-            }).catch(err => console.log(err))
-    }
+    let query  = '%'+search+'%'; // PH -> PHP, Word -> Wordpress, press -> Wordpress
+  
+    if(!search) {
+      Job.findAll({order: [
+        ['createdAt', 'DESC']
+      ]})
+      .then(jobs => {
     
-}})
-
-
-
-// jobs routes
-app.use('/jobs', require('./routes/jobs'));
+        res.render('index', {
+          jobs
+        });
+    
+      })
+      .catch(err => console.log(err));
+    } else {
+      Job.findAll({
+        where: {title: {[Op.like]: query}},
+        order: [
+          ['createdAt', 'DESC']
+      ]})
+      .then(jobs => {
+        console.log(search);
+        console.log(search);
+    
+        res.render('index', {
+          jobs, search
+        });
+    
+      })
+      .catch(err => console.log(err));
+    }
+  
+    
+  });
+  
+  // jobs routes
+  app.use('/jobs', require('./routes/jobs'));
