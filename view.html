@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <a id="logo" href="/">Trampos</a>
+            <button class="">
+                <span class=""></span>
+            </button>
+            <div id="options">
+                <a class="nav-options" href="/">Ver Vagas</a>
+                <a id="abrir-vaga" class="nav-options" href="/">Abrir Vaga</a>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <div id="voltar-div">
+            <a id="voltar-btn" href="/">Voltar</a>
+        </div>
+        <div id="box-details">
+            <div id="detalhes-vaga">
+                <h1 class="">{{job.dataValues.title}}</h1>
+                <p class="">Quem eles estão buscando:</p>
+                <p class="">{{job.dataValues.description}}</p>
+                <p><span class="">O salário informado é de:</span> R${{job.dataValues.salary}}</p>
+                <p>
+                    Para trabalhar na <span class="">{{job.dataValues.company}}</span> envie um e-mail para a <a
+                        class="main-color" href="mail:to{{job.dataValues.email}}">{{job.dataValues.email}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

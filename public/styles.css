@@ -43,7 +43,8 @@ body{
 }
 
 #abrir-vaga{
-    background-color: #5B86E5;
+    background-color: #0051ff;
+    color: white;
     padding: .3em .9em ;
     border: 2px solid rgb(255, 255, 255);
     transition: all .3s ease-in-out;
@@ -60,6 +61,12 @@ body{
     color: black;
     text-decoration: none;
     font-size: 1.3em;
+    transition: all .3s ease-in-out;
+}
+
+.nav-options:hover{
+    color: #0000ff;
+    transition: all .3s ease-in-out;
 }
 
 /* DIV SEARCH */
@@ -210,15 +217,17 @@ body{
     font-style:inherit;
 }
 
-.ver-vaga-box{
+#ver-vaga-box{
     background-color: #0051ff;
+    color: white;
     font-size: 1.2em;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
     transition: all .2s ease-in-out;
+    text-decoration: none;
 }
-.ver-vaga-box:hover{
+#ver-vaga-box:hover{
     background-color: transparent;
     color: blue;
     transition: all .2s ease-in-out;
@@ -247,16 +256,17 @@ body{
 #form{
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     flex-direction: column;
     margin-top: 4vw;
     background-color: white;
-    width: 55vw;
+    width: 55%;
     border-radius: 20px;
     border: 1px solid rgb(78, 78, 78);
-    margin-left: 20vw;
-    margin-right: 20vw;
-    margin-bottom: 5vw;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+    margin-bottom: 5%;
     box-shadow: 10px 10px  rgb(116, 117, 119);
 }
 
@@ -307,4 +317,135 @@ body{
     display: none;
 }
 
+/* PAGE DETAILS */
+
+#box-details{
+    background-color: rgb(228, 236, 248);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    border-radius: 3px;
+    border: 2px solid #164ec6;
+    box-shadow: 5px 5px  rgba(0, 72, 255, 0.5);
+
+}
+
+#voltar-div{
+    display: flex;
+    align-items: start;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1em;
+}
+
+#voltar-btn{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    background-color: #0051ff;
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+
+.description-p{
+    color: #0000ff;
+}
+
+#detalhes-vaga{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    line-height: 2.3em;
+    width: 80%;
+    text-align: center;
+}
+
+#detalhes-vaga h1{
+    text-transform: capitalize;
+    padding-bottom: .6em;
+}
+
+.span-company{
+    color: #0000ff;
+    text-decoration: none;
+}
+
+@media (max-width: 481px){
+
+    #nav{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: 35vw;
+    }
+
+    #nav div{
+        justify-content: space-around;
+        width: 90%;
+    }
+
+    #div-search{
+        flex-direction: column;
+        height: 18em;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #title-div-seach{
+        font-size: 1.4em;
+        max-width: 90%;
+    }
+
+    #description-div-search{
+        max-width: 80%;
+        font-size: 1em;
+    }
+
+    #form-div-search{
+        flex-direction: column;
+        height: 5em;
+        justify-content: space-around;
+    }
+
+    .search-div-search{
+        font-size: 1em;
+    }
+
+    #jobs-board{
+        width: 95%;
+        margin: 0;
+        height: 100%;
+    }
+
+    #titulo-jobs-board{
+        font-size: 1.4em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.5em;
+        height: 2.5em;
+        text-align: center;
+    }
+
+    .box-vaga,
+    .box-vaga-nova{
+        height: 20vw;
+        font-size: .8em;
+    }
+
+    .details-vagas{
+        height: 95%;
+        max-width: 50%;
+    }
+}
 

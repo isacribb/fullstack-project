@@ -3,7 +3,7 @@
     <p id="description-div-search">Somos a maior rede de divulgação de vagas de empregos!</p>
     <form id="form-div-search" class="form-inline" action="/" method="GET">
         <div>
-            <input type="text" class="search-div-search" name="job" id="job" placeholder="Digite a vaga que está buscando" size="50">
+            <input type="text" class="search-div-search" name="job" id="job" placeholder="Digite a vaga que está buscando" size="30">
         </div>
         <div>
             <button type="submit" class="button-div-search">Procurar</button>
@@ -25,10 +25,10 @@
                             <div class="details-vagas">
                                 <p>{{dataValues.company}}</p>
                                 <h2>{{dataValues.title}}</h2>
-                                <p>{{dataValues.salary}}$</p>
+                                <p>R${{dataValues.salary}}</p>
                             </div>
                             <span id="nova-vaga" class="hidden{{#if dataValues.new_job}}-reverse{{/if}}">Nova</span>
-                            <a class="ver-vaga-box">Ver vaga</a>
+                            <a id="ver-vaga-box" href="/jobs/view/{{dataValues.id}}">Ver vaga</a>
                         </li>
                     {{/each}}
                 </ul>
